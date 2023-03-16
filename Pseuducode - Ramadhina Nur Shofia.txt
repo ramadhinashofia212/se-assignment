@@ -1,0 +1,20 @@
+START 
+
+DECLARE "Go to hospital" with STRING
+DECLARE "Submit a letter from a doctor outside the hospital" to the cashier  with STRING
+DECLARE "Registration"  with STRING
+DECLARE "INPUT" patient goes home  with STRING
+
+IF "patient was discharged" equal true
+	CHOOSE "Complete administration"
+ELSE
+	CHOOSE "Go to ICU or NCU"
+
+DECLARE "INPUT" Payment method with STRING
+
+IF Payments are made through the DANA application
+	CHOOSE "Provide payment code"
+ELSE 
+	CHOOSE "Deposit cash to cashier"
+
+FINISH
